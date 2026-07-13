@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+!.env.example
+sessions/*
+!sessions/.gitkeep
+data/*
+!data/.gitkeep
+npm-debug.log*
+*.log
+.DS_Store

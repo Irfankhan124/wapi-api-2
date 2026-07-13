@@ -1,0 +1,25 @@
+{
+  "name": "wapi-api-2-fixed",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Lightweight multi-session WhatsApp API compatible with the WAPI Baileys QR flow.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check src/config.js && node --check src/store.js && node --check src/session-manager.js"
+  },
+  "engines": {
+    "node": ">=22 <23"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^7.0.0-rc.9",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "pino": "^10.1.0",
+    "qrcode": "^1.5.4",
+    "socket.io": "^4.8.1"
+  }
+}

@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: wapi-api-2-fixed
+    runtime: docker
+    plan: starter
+    autoDeploy: true
+    healthCheckPath: /health
+    disk:
+      name: wapi-system-2-data
+      mountPath: /var/data/wapi-system-2
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: INSTANCE_NAMESPACE
+        value: wapi-system-2
+      - key: DATA_DIR
+        value: /var/data/wapi-system-2/data
+      - key: SESSION_DIR
+        value: /var/data/wapi-system-2/sessions
+      - key: AUTH_MODE
+        value: none
+      - key: ALLOWED_ORIGINS
+        sync: false
